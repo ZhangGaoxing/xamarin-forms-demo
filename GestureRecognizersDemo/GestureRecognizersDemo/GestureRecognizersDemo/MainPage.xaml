@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GestureRecognizersDemo"
+             x:Class="GestureRecognizersDemo.MainPage">
+    <ContentPage.Content>
+        <StackLayout Margin="10">
+            <Label Text="GestureRecognizers Demo" FontSize="30" TextColor="Black" />
+
+            <Label Text="Hyperlinks" FontSize="20" TextColor="Black" />
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Text : " VerticalTextAlignment="Center" />
+                <Label x:Name="Email" Text="zhangyuexin121@live.cn" VerticalTextAlignment="Center" TextColor="DodgerBlue"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="Image : " VerticalTextAlignment="Center" />
+                <Image x:Name="Weibo" Source="weibo.png" HeightRequest="35" WidthRequest="35" VerticalOptions="Center" />
+            </StackLayout>
+
+            <Label Text="Fake Click Event" FontSize="20" TextColor="Black" />
+            <Label Text="0" FontSize="18" FontAttributes="Bold" TextColor="Black">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped" />
+                </Label.GestureRecognizers>
+            </Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
